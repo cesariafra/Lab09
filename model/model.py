@@ -38,6 +38,7 @@ class Model:
             --> Ogni Tour ha un set di Attrazione.
             --> Ogni Attrazione ha un set di Tour.
         """
+        return TourDAO.get_tour_attrazioni()
 
         # TODO
 
@@ -52,6 +53,7 @@ class Model:
         :return: self._costo (il costo del pacchetto)
         :return: self._valore_ottimo (il valore culturale del pacchetto)
         """
+
         self._pacchetto_ottimo = []
         self._costo = 0
         self._valore_ottimo = -1
@@ -62,5 +64,6 @@ class Model:
 
     def _ricorsione(self, start_index: int, pacchetto_parziale: list, durata_corrente: int, costo_corrente: float, valore_corrente: int, attrazioni_usate: set):
         """ Algoritmo di ricorsione che deve trovare il pacchetto che massimizza il valore culturale"""
+
 
         # TODO: è possibile cambiare i parametri formali della funzione se ritenuto opportuno
